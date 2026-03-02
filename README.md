@@ -7,7 +7,7 @@ to explore original response strategies for the company. The objective is to
 allow young researchers to tackle a problem from the socio-economic world, work as a team, and produce original solutions
 within a short timeframe. Furthermore, SEMES allow participants to expand their professional networks.
 
-## The project:  Energy-efficient navigation of a terrestrial robot in an uncertain environment
+# The project:  Energy-efficient navigation of a terrestrial robot in an uncertain environment
 
 This project has been developped during the SEMES at La Rochelle from 24 to 28 November 2025.
 
@@ -33,16 +33,18 @@ The environment is characterized by two primary functions:
 
 The total energy $dE$ required for movement is defined by the work of the motor force $\vec{F}$ over a distance $d\vec{\ell}$:
 
-$$dE = \vec{F} \cdot d\vec{\ell}$$
+$$ dE = \vec{F} \cdot d\vec{\ell} .$$
 
-To move, the motor must overcome two main external forces:
-- **Frictional Force** $F_f$: Its intensity is calculated as:
 
-$$ F_f = \alpha \, mg \cos(\theta) $$
+The displacements $d\vec{\ell}$ and the total force $\vec{F}$ have to be expressed in terms of $\gamma$, $h$, and $\alpha$. We consider
+two main external forces:
+- **Frictional Force** $F_f$: Given the slope of the terrain $\theta$ (which depends on $h$), the intensity of the friction force is calculated as
+
+$$ F_f = \alpha  mg \cos(\theta), $$
 
 - **Weight Force** $F_w$: The gravitational component acting on slopes. Its work depends on the gradient of the height function:
 
-$$ \vec{F}_w \cdot d\vec{\ell} = mg \, \nabla h(\gamma(t)) \cdot d\vec{\gamma} $$
+$$ \vec{F}_w \cdot d\vec{\ell} = mg  \nabla h(\gamma(t)) \cdot d\vec{\gamma} $$
  
 
 Once we express the energy functional in terms of the path $\gamma$, we minimize it through a gradient descent method using
